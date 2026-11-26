@@ -17,7 +17,7 @@ COUPONS = {
 }
 
 
-def apply_coupon(subtotal, code=None):
+def apply_discount(subtotal, code=None):
     """Return the subtotal after the coupon. Unknown codes raise ValueError."""
     if not code:
         return to_money(subtotal)
