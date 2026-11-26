@@ -7,7 +7,7 @@ CENT = Decimal("0.01")
 
 def to_money(value):
     """Convert a number or string to a Decimal amount in whole cents."""
-    return Decimal(str(value)).quantize(CENT, rounding=ROUND_HALF_UP)
+    return Decimal(value).quantize(CENT, rounding=ROUND_HALF_UP)
 
 
 def format_money(amount, currency="USD"):
