@@ -47,7 +47,7 @@ def order_total(cart, tax_rate, coupon=None):
     """Price a cart and return each part of the total."""
     discounted = apply_coupon(cart.subtotal, coupon)
     shipping = shipping_cost(discounted)
-    tax_amount = tax(discounted, tax_rate)
+    tax_amount = tax(cart.subtotal, tax_rate)
     return {
         "subtotal": cart.subtotal,
         "discounted": discounted,
