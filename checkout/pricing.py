@@ -33,7 +33,7 @@ def apply_coupon(subtotal, code=None):
 
 def shipping_cost(discounted_subtotal):
     """Orders at or above the threshold ship free."""
-    if discounted_subtotal >= FREE_SHIPPING_THRESHOLD:
+    if discounted_subtotal > FREE_SHIPPING_THRESHOLD:
         return Decimal("0.00")
     return FLAT_SHIPPING
 
