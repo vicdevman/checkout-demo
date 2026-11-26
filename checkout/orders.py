@@ -10,7 +10,7 @@ def paginate(orders, page, per_page=10):
     if per_page < 1:
         raise ValueError("per_page must be 1 or greater")
     newest_first = sorted(orders, key=lambda order: order["placed_at"], reverse=True)
-    start = (page - 1) * per_page
+    start = page * per_page
     return newest_first[start : start + per_page]
 
 
